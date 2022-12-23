@@ -1,26 +1,29 @@
 ﻿#include <iostream> 
 #include <string>
-#include "Methods.h"
+#include "Methods.cpp"
+#define NUMBER_OF_SMARTPHONES_IN_SHOP 3
 using namespace std;
 #define ARRAY_SIZE 3    
 
 int main() {
-    Shop a;
-    int input;
-    float money;
-    while (1) {
+    SmartphoneShop obj_smartphone_shop;
+    int number_of_action_to_be_performed;
+    float how_much_money_buyer_have;
+    while (true) {
         cout << "Best 1, Sort 2, Exit 0 \n inp:";
-        cin >> input;
-        switch (input)
+        cin >> number_of_action_to_be_performed;
+        switch (number_of_action_to_be_performed)
         {
         case(1):
             cout << "Enter your budget: ";
-            cin >> money;
-            a.best(money);
+            cin >> number_of_action_to_be_performed;
+            obj_smartphone_shop.print_BestSmartphoneByPrice(number_of_action_to_be_performed);
             break;
         case(2):
-            a.sort();
-            a.outAll();
+            obj_smartphone_shop.sort_ListOfSmartphonesInShopByPrice();
+            obj_smartphone_shop.print_ListOfSmartphonesInShop();
+            break;
+        case(0): return 0;
             break;
         default: return 0;
         }
