@@ -2,8 +2,7 @@
 #include <string>
 #include "Methods.cpp"
 #define NUMBER_OF_SMARTPHONES_IN_SHOP 3
-using namespace std;
-#define ARRAY_SIZE 3    
+using namespace std;  
 
 int main() {
     SmartphoneShop obj_smartphone_shop;
@@ -25,7 +24,9 @@ int main() {
             break;
         case(0): return 0;
             break;
-        default: return 0;
+        default: 
+            cout << "Comand not found." << endl;
+            break;
         }
     }
 }
